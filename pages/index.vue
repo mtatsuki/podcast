@@ -19,6 +19,13 @@
           target="_blank"
           class="button--grey"
         >GitHub</a>
+        <!-- audio tag - export以降にmp3ファイルのid(drive)を入れてやると再生できる -->
+        <audio preload="auto" controls>
+          <source src="http://drive.google.com/uc?export=view&id=1qpo6qpMScDKTNcKaekUoO4_WfirF_Jaa" type="audio/mp3">
+        </audio>
+        <!-- driveの埋め込みコード -->
+        <iframe src="https://drive.google.com/file/d/1qpo6qpMScDKTNcKaekUoO4_WfirF_Jaa/preview" width="350" height="70">
+        </iframe>
       </div>
     </div>
   </div>
