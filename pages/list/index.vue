@@ -2,9 +2,12 @@
 
   <b-container fluid class="mt-5">
     <b-row class="mx-auto" style="width:80%;">
-      <b-col>
+      <div class="col-md-3 col-xs-12 order-md-2">
+        <b-form-input v-model="text" placeholder="Search ..."></b-form-input>
+      </div>
+      <div class="col-md-9 col-xs-12 order-md-1 mx-auto details">
         <b-media>
-          <b-img slot="aside" blank blank-color="#ccc" width="250" alt="placeholder"></b-img>
+          <img class="img-fluid float-md-left m-4" src="https://appexchangejp.salesforce.com/servlet/servlet.FileDownload?file=00P3A00000iaPg1UAE" width="200">
           <h1 class="mt-0">Audio Title</h1>
           <p class="mx-3 text-muted">
             2019-06-15
@@ -14,10 +17,7 @@
           </p>
           <b-button variant="success">再生する</b-button>
         </b-media>
-      </b-col>
-      <b-col cols="3">
-        <b-form-input v-model="text" placeholder="Search ..."></b-form-input>
-      </b-col>
+      </div>
     </b-row>
     <b-row class="my-4 mx-auto" style="width:80%;">
       <b-col>
@@ -30,31 +30,31 @@
         </template>
       </b-col>
     </b-row>
-    <nav class="navbar navbar-dark bg-dark navbar-fixed-bottom bottom-nav text-white" role="navigation">
-      <b-col cols="4">
+    <nav class="navbar navbar-dark bg-dark navbar-fixed-bottom bottom-nav  text-white" role="navigation">
+      <b-col cols="3">
         <b-media class="mt-2">
-          <b-img slot="aside" blank blank-color="#ccc" width="64" alt="placeholder"></b-img>
+          <img class="player-img float-left mx-4" src="https://appexchangejp.salesforce.com/servlet/servlet.FileDownload?file=00P3A00000iaPg1UAE">
           <h4 class="mx-3">Audio Title</h4>
-          <p class="mx-4 text-muted">
+          <p class="mx-3 text-muted">
             2019-06-15
           </p>
         </b-media>
       </b-col>
-      <b-col cols="4">
+      <b-col cols="6">
         <div class="button-group mb-3 text-center">
           <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary btn-lg">◀︎</button>
-            <button type="button" class="btn btn-secondary btn-lg">stop</button>
+            <button type="button" class="btn btn-secondary btn-lg">◀︎◀︎</button>
             <button type="button" class="btn btn-secondary btn-lg">▶︎</button>
+            <button type="button" class="btn btn-secondary btn-lg">▶︎▶︎</button>
           </div>
         </div>
-        <div class="player-group">
+        <div class="player-group text-center">
           <b-row>
             <b-col>
               0:00
             </b-col>
-            <b-col cols="9">
-            <b-progress></b-progress>
+            <b-col>
+              <b-progress></b-progress>
             </b-col>
             <b-col>
             5:09
@@ -62,15 +62,14 @@
           </b-row>
         </div>
       </b-col>
-      <b-col class="text-center" cols="4">
-        sound controller area
+      <b-col class="text-center" cols="3">
+       🔈
       </b-col>
     </nav>
   </b-container>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -102,6 +101,12 @@ export default {
 </script>
 
 <style>
+html { font-size: 1vw;}
+@media screen and (max-width: 576px) {
+  .details {
+    text-align: center;
+  }
+}
 .bottom-nav{
   width: 100%;
   height: 120px;
@@ -111,6 +116,9 @@ export default {
 }
 .button-group{
   height: 50%;
+}
+.player-img {
+width: 18%;
 }
 .player-group{
   height: 50%;
